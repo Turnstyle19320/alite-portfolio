@@ -1,8 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { C, SANS, SERIF } from "../constants";
 
-const PIPELINE_ID = "5db3727e-a1f1-4a2c-907f-9e7f913e3059";
-const API_URL = `https://brainfreeze.api.airia.ai/v2/PipelineExecution/${PIPELINE_ID}`;
+const API_URL = "https://alite-chat-proxy.preppanel.workers.dev/chat";
 
 // Agent Smith SVG avatar
 function SmithAvatar({ size = 48 }) {
@@ -89,33 +88,14 @@ export default function Chatbot() {
     setLoading(true);
 
     try {
-      const apiKey = window.__ALITE_API_KEY;
-      if (!apiKey) {
-        setMessages((prev) => [
-          ...prev,
-          {
-            role: "assistant",
-            text: "I'm afraid I can't do that, Mr. Anderson. The API key has not been configured. Ask your administrator to set window.__ALITE_API_KEY.",
-          },
-        ]);
-        setLoading(false);
-        return;
-      }
-
-      const body = {
-        userInput: text,
-        asyncOutput: false,
-      };
+      const body = { userInput: text };
       if (conversationId) {
         body.conversationId = conversationId;
       }
 
       const res = await fetch(API_URL, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "X-API-KEY": apiKey,
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
       });
 
