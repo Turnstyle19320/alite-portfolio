@@ -3,6 +3,7 @@ import { HashRouter, Routes, Route, useLocation } from "react-router-dom";
 import { C } from "./constants";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
+import Chatbot from "./components/Chatbot";
 import HomePage from "./pages/HomePage";
 import ServiceDetail from "./pages/ServiceDetail";
 import StoryDetail from "./pages/StoryDetail";
@@ -36,6 +37,7 @@ export default function App() {
           <Route path="/stories/:slug" element={<StoryDetail />} />
         </Routes>
         <Footer />
+        <Chatbot />
       </HashRouter>
     </>
   );
