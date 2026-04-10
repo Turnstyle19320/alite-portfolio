@@ -56,12 +56,8 @@ function TypingIndicator() {
 
 export default function Chatbot() {
   const [open, setOpen] = useState(false);
-  const [messages, setMessages] = useState([
-    {
-      role: "assistant",
-      text: "Mr. Anderson... welcome to the ALITE Portfolio. I've been expecting you. How may I assist you today?",
-    },
-  ]);
+  const [messages, setMessages] = useState([]);
+  const [greeted, setGreeted] = useState(false);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const [conversationId, setConversationId] = useState(null);
@@ -73,6 +69,24 @@ export default function Chatbot() {
   }, [messages]);
 
   useEffect(() => {
+    if (open && !greeted) {
+      setGreeted(true);
+      setLoading(true);
+      fetch(API_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ userInput: "hello" }),
+      })
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.executionId) setConversationId(data.executionId);
+          setMessages([{ role: "assistant", text: data.result || "Hello! How can I help?" }]);
+        })
+        .catch(() => {
+          setMessages([{ role: "assistant", text: "Hello! How can I help you today?" }]);
+        })
+        .finally(() => setLoading(false));
+    }
     if (open && inputRef.current) {
       inputRef.current.focus();
     }
