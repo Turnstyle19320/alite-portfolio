@@ -176,6 +176,7 @@ export default function Hero() {
           }}
         >
           <img
+            className="a4-photo"
             src={`${import.meta.env.BASE_URL}images/hero-workshop.jpg`}
             alt="Team collaborating around a whiteboard during a strategy session"
             style={{ width: "100%", height: 300, objectFit: "cover", display: "block" }}

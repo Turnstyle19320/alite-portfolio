@@ -16,7 +16,8 @@ export default function App() {
         *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
         html{scroll-behavior:smooth}
         body{background:${C.warmWhite};-webkit-font-smoothing:antialiased}
-        @media(max-width:768px){.a4-desk{display:none!important}.a4-mob-btn{display:block!important}.a4-hero-inner{flex-direction:column!important}.a4-hero-img{flex:1 1 auto!important;width:100%!important}}
+        .a4-photo{filter:brightness(1.05) sepia(0.05)}.a4-photo-bright{filter:brightness(1.2) sepia(0.05)}
+        @media(max-width:768px){.a4-desk{display:none!important}.a4-mob-btn{display:block!important}.a4-hero-inner{flex-direction:column!important}.a4-hero-img{flex:1 1 auto!important;width:100%!important}.a4-niche-inner{flex-direction:column!important}.a4-niche-img{flex:1 1 auto!important;width:100%!important}}
         @media(min-width:769px){.a4-mob-menu{display:none!important}}
       `}</style>
       <Nav />

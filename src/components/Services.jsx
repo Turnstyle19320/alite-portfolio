@@ -6,18 +6,25 @@ const PILLARS = [
   {
     title: "AI Strategy & Implementation",
     accent: C.teal,
+    img: "svc-strategy.jpg",
+    alt: "Person mapping out a strategy on a board covered with sticky notes",
     desc: "We help teams figure out where AI fits, and where it doesn't. Whether you're an ISD department trying to streamline internal workflows or a district building your first AI integration plan, we start with your actual priorities and work toward a roadmap you can defend to your board.",
     tags: ["Roadmaps", "Risk Discovery", "Ethics"],
   },
   {
     title: "Professional Learning",
     accent: C.gold,
+    img: "svc-pd.jpg",
+    bright: true,
+    alt: "Presenter leading a professional development session with educators",
     desc: "We build professional learning around the questions educators are actually asking. That means hands-on workshops for ISD departments, conference sessions for regional audiences, and embedded coaching for district teams who want to keep building after the session ends.",
     tags: ["Workshops", "Conferences", "Coaching"],
   },
   {
     title: "Innovation Labs",
     accent: C.tealDark,
+    img: "svc-labs.jpg",
+    alt: "Overhead view of a collaborative workspace with laptops and notebooks",
     desc: "This is where ideas become working tools. We build AI agents, run proof-of-concept tests, and co-design pilots with ISD departments and district partners. Then we measure what actually worked before scaling anything.",
     tags: ["Agent Building", "POCs", "Pilots"],
   },
@@ -79,6 +86,17 @@ export default function Services() {
                   e.currentTarget.style.transform = "translateY(0)";
                 }}
               >
+                <img
+                  className={p.bright ? "a4-photo-bright" : "a4-photo"}
+                  src={`${import.meta.env.BASE_URL}images/${p.img}`}
+                  alt={p.alt}
+                  style={{
+                    width: "100%",
+                    height: 160,
+                    objectFit: "cover",
+                    display: "block",
+                  }}
+                />
                 <div style={{ height: 4, background: p.accent }} />
                 <div
                   style={{

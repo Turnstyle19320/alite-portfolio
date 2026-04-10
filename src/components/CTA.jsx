@@ -13,6 +13,16 @@ export default function CTA() {
         background: `linear-gradient(135deg, ${C.navy} 0%, ${C.tealDark} 100%)`,
       }}
     >
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          backgroundImage: `url(${import.meta.env.BASE_URL}images/cta-bg.jpg)`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          opacity: 0.08,
+        }}
+      />
       <div style={{ position: "absolute", top: 30, right: "8%", opacity: 0.08 }}>
         <Diamond size={120} color={C.teal} />
       </div>
