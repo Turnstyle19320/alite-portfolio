@@ -1,37 +1,8 @@
+import { Link } from "react-router-dom";
 import { C, SANS, SERIF } from "../constants";
+import STORIES from "../data/stories";
 import SectionLabel from "./SectionLabel";
 import RevealWrapper from "./RevealWrapper";
-
-const STORIES = [
-  {
-    role: "Special Ed Coordinator",
-    ctx: "Ingham ISD",
-    summary:
-      "The IEP Goal Assistant changed our workflow overnight. Our coordinators are spending less time on first drafts and more time on the individualization that actually matters for students.",
-    dot: C.teal,
-  },
-  {
-    role: "Superintendent",
-    ctx: "Rural K-8 district",
-    summary:
-      "I needed something I could bring to my board that was responsible and realistic. ALITE helped us get from zero to a board-approved AI integration plan without hiring a consultant or pretending we had all the answers.",
-    dot: C.gold,
-  },
-  {
-    role: "HR Director",
-    ctx: "Ingham ISD",
-    summary:
-      "Honestly, I was skeptical. But the agent ALITE built for our onboarding workflow does exactly what they said it would. Handles the routine document generation so our staff can focus on the human side of bringing new hires in.",
-    dot: C.olive,
-  },
-  {
-    role: "Instructional Coach",
-    ctx: "Urban high school district",
-    summary:
-      "I was spending two hours a night sorting exit ticket data. The agent does it in minutes and flags the patterns I'd miss when I'm tired. That's not replacing my judgment. It's giving me better information to use it.",
-    dot: C.tealDark,
-  },
-];
 
 export default function Stories() {
   return (
@@ -144,8 +115,8 @@ export default function Stories() {
                   >
                     {s.summary}
                   </p>
-                  <a
-                    href="#"
+                  <Link
+                    to={`/stories/${s.slug}`}
                     style={{
                       fontFamily: SANS,
                       fontSize: 13,
@@ -156,7 +127,7 @@ export default function Stories() {
                     }}
                   >
                     Read full story &rarr;
-                  </a>
+                  </Link>
                 </div>
               </div>
             </RevealWrapper>

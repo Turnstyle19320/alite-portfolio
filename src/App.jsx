@@ -1,13 +1,19 @@
+import { useEffect } from "react";
+import { HashRouter, Routes, Route, useLocation } from "react-router-dom";
 import { C } from "./constants";
 import Nav from "./components/Nav";
-import Hero from "./components/Hero";
-import Stories from "./components/Stories";
-import Niche from "./components/Niche";
-import Services from "./components/Services";
-import Work from "./components/Work";
-import Resources from "./components/Resources";
-import CTA from "./components/CTA";
 import Footer from "./components/Footer";
+import HomePage from "./pages/HomePage";
+import ServiceDetail from "./pages/ServiceDetail";
+import StoryDetail from "./pages/StoryDetail";
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+}
 
 export default function App() {
   return (
@@ -21,15 +27,16 @@ export default function App() {
         @media(max-width:768px){.a4-desk{display:none!important}.a4-mob-btn{display:block!important}.a4-hero-inner{flex-direction:column!important}.a4-hero-img{flex:1 1 auto!important;width:100%!important}.a4-niche-inner{flex-direction:column!important}.a4-niche-img{flex:1 1 auto!important;width:100%!important}}
         @media(min-width:769px){.a4-mob-menu{display:none!important}}
       `}</style>
-      <Nav />
-      <Hero />
-      <Stories />
-      <Niche />
-      <Services />
-      <Work />
-      <Resources />
-      <CTA />
-      <Footer />
+      <HashRouter>
+        <ScrollToTop />
+        <Nav />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/services/:slug" element={<ServiceDetail />} />
+          <Route path="/stories/:slug" element={<StoryDetail />} />
+        </Routes>
+        <Footer />
+      </HashRouter>
     </>
   );
 }

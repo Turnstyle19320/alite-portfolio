@@ -1,16 +1,23 @@
 import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { C, SANS, SERIF } from "../constants";
 import Diamond from "./Diamond";
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
   const [scrolled, setSc] = useState(false);
+  const location = useLocation();
+  const isHome = location.pathname === "/";
 
   useEffect(() => {
     const handler = () => setSc(window.scrollY > 30);
     window.addEventListener("scroll", handler, { passive: true });
     return () => window.removeEventListener("scroll", handler);
   }, []);
+
+  useEffect(() => {
+    setOpen(false);
+  }, [location]);
 
   const linkStyle = {
     color: C.textMid,
@@ -22,6 +29,22 @@ export default function Nav() {
   };
 
   const NAV_LINKS = ["Work", "Services", "Resources", "Contact"];
+
+  function navHref(section) {
+    if (isHome) return `#${section.toLowerCase()}`;
+    return `/#/${section.toLowerCase()}`;
+  }
+
+  function handleNavClick(e, section) {
+    if (isHome) {
+      // On homepage, just scroll to the section
+      e.preventDefault();
+      const el = document.getElementById(section.toLowerCase());
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    }
+    // On other pages, the href navigates home. After navigation,
+    // ScrollToTop fires and we land at the top. Close enough for now.
+  }
 
   return (
     <nav
@@ -50,8 +73,8 @@ export default function Nav() {
           height: 64,
         }}
       >
-        <a
-          href="#"
+        <Link
+          to="/"
           style={{
             textDecoration: "none",
             display: "flex",
@@ -83,7 +106,7 @@ export default function Nav() {
           >
             Ingham ISD
           </span>
-        </a>
+        </Link>
 
         <div
           className="a4-desk"
@@ -92,7 +115,8 @@ export default function Nav() {
           {NAV_LINKS.map((item) => (
             <a
               key={item}
-              href={`#${item.toLowerCase()}`}
+              href={navHref(item)}
+              onClick={(e) => handleNavClick(e, item)}
               style={linkStyle}
               onMouseEnter={(e) => (e.target.style.color = C.tealDark)}
               onMouseLeave={(e) => (e.target.style.color = C.textMid)}
@@ -101,7 +125,8 @@ export default function Nav() {
             </a>
           ))}
           <a
-            href="#contact"
+            href={navHref("Contact")}
+            onClick={(e) => handleNavClick(e, "Contact")}
             style={{
               padding: "8px 20px",
               borderRadius: 6,
@@ -120,6 +145,7 @@ export default function Nav() {
         <button
           className="a4-mob-btn"
           onClick={() => setOpen(!open)}
+          aria-label="Toggle navigation menu"
           style={{
             display: "none",
             background: "none",
@@ -148,16 +174,16 @@ export default function Nav() {
           {NAV_LINKS.map((item) => (
             <a
               key={item}
-              href={`#${item.toLowerCase()}`}
-              onClick={() => setOpen(false)}
+              href={navHref(item)}
+              onClick={(e) => handleNavClick(e, item)}
               style={{ ...linkStyle, fontSize: 16, padding: "6px 0" }}
             >
               {item}
             </a>
           ))}
           <a
-            href="#contact"
-            onClick={() => setOpen(false)}
+            href={navHref("Contact")}
+            onClick={(e) => handleNavClick(e, "Contact")}
             style={{
               padding: "10px 18px",
               borderRadius: 6,

@@ -1,34 +1,8 @@
+import { Link } from "react-router-dom";
 import { C, SANS, SERIF } from "../constants";
+import PILLARS from "../data/pillars";
 import SectionLabel from "./SectionLabel";
 import RevealWrapper from "./RevealWrapper";
-
-const PILLARS = [
-  {
-    title: "AI Strategy & Implementation",
-    accent: C.teal,
-    img: "svc-strategy.jpg",
-    alt: "Person mapping out a strategy on a board covered with sticky notes",
-    desc: "We help teams figure out where AI fits, and where it doesn't. Whether you're an ISD department trying to streamline internal workflows or a district building your first AI integration plan, we start with your actual priorities and work toward a roadmap you can defend to your board.",
-    tags: ["Roadmaps", "Risk Discovery", "Ethics"],
-  },
-  {
-    title: "Professional Learning",
-    accent: C.gold,
-    img: "svc-pd.jpg",
-    bright: true,
-    alt: "Presenter leading a professional development session with educators",
-    desc: "We build professional learning around the questions educators are actually asking. That means hands-on workshops for ISD departments, conference sessions for regional audiences, and embedded coaching for district teams who want to keep building after the session ends.",
-    tags: ["Workshops", "Conferences", "Coaching"],
-  },
-  {
-    title: "Innovation Labs",
-    accent: C.tealDark,
-    img: "svc-labs.jpg",
-    alt: "Overhead view of a collaborative workspace with laptops and notebooks",
-    desc: "This is where ideas become working tools. We build AI agents, run proof-of-concept tests, and co-design pilots with ISD departments and district partners. Then we measure what actually worked before scaling anything.",
-    tags: ["Agent Building", "POCs", "Pilots"],
-  },
-];
 
 export default function Services() {
   return (
@@ -66,89 +40,95 @@ export default function Services() {
         >
           {PILLARS.map((p, i) => (
             <RevealWrapper key={p.title} delay={0.06 + i * 0.06}>
-              <div
-                style={{
-                  background: C.warmWhite,
-                  borderRadius: 10,
-                  overflow: "hidden",
-                  border: `1px solid ${C.border}`,
-                  height: "100%",
-                  display: "flex",
-                  flexDirection: "column",
-                  transition: "box-shadow 0.25s, transform 0.25s",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.boxShadow = `0 4px 18px ${C.teal}12`;
-                  e.currentTarget.style.transform = "translateY(-2px)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.boxShadow = "none";
-                  e.currentTarget.style.transform = "translateY(0)";
-                }}
+              <Link
+                to={`/services/${p.slug}`}
+                style={{ textDecoration: "none", color: "inherit", display: "block", height: "100%" }}
               >
-                <img
-                  className={p.bright ? "a4-photo-bright" : "a4-photo"}
-                  src={`${import.meta.env.BASE_URL}images/${p.img}`}
-                  alt={p.alt}
-                  style={{
-                    width: "100%",
-                    height: 160,
-                    objectFit: "cover",
-                    display: "block",
-                  }}
-                />
-                <div style={{ height: 4, background: p.accent }} />
                 <div
                   style={{
-                    padding: "26px 22px",
+                    background: C.warmWhite,
+                    borderRadius: 10,
+                    overflow: "hidden",
+                    border: `1px solid ${C.border}`,
+                    height: "100%",
                     display: "flex",
                     flexDirection: "column",
-                    flex: 1,
+                    transition: "box-shadow 0.25s, transform 0.25s",
+                    cursor: "pointer",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.boxShadow = `0 4px 18px ${C.teal}12`;
+                    e.currentTarget.style.transform = "translateY(-2px)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.boxShadow = "none";
+                    e.currentTarget.style.transform = "translateY(0)";
                   }}
                 >
-                  <h3
+                  <img
+                    className={p.bright ? "a4-photo-bright" : "a4-photo"}
+                    src={`${import.meta.env.BASE_URL}images/${p.img}`}
+                    alt={p.alt}
                     style={{
-                      fontFamily: SERIF,
-                      fontSize: 18,
-                      color: C.navy,
-                      margin: "0 0 10px",
-                      fontWeight: 700,
+                      width: "100%",
+                      height: 160,
+                      objectFit: "cover",
+                      display: "block",
                     }}
-                  >
-                    {p.title}
-                  </h3>
-                  <p
+                  />
+                  <div style={{ height: 4, background: p.accent }} />
+                  <div
                     style={{
-                      fontFamily: SANS,
-                      fontSize: 14,
-                      lineHeight: 1.7,
-                      color: C.textMid,
-                      margin: "0 0 16px",
+                      padding: "26px 22px",
+                      display: "flex",
+                      flexDirection: "column",
                       flex: 1,
                     }}
                   >
-                    {p.desc}
-                  </p>
-                  <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
-                    {p.tags.map((t) => (
-                      <span
-                        key={t}
-                        style={{
-                          padding: "3px 10px",
-                          borderRadius: 12,
-                          fontSize: 12,
-                          fontFamily: SANS,
-                          color: C.tealDark,
-                          background: C.tealVLight,
-                          fontWeight: 500,
-                        }}
-                      >
-                        {t}
-                      </span>
-                    ))}
+                    <h3
+                      style={{
+                        fontFamily: SERIF,
+                        fontSize: 18,
+                        color: C.navy,
+                        margin: "0 0 10px",
+                        fontWeight: 700,
+                      }}
+                    >
+                      {p.title}
+                    </h3>
+                    <p
+                      style={{
+                        fontFamily: SANS,
+                        fontSize: 14,
+                        lineHeight: 1.7,
+                        color: C.textMid,
+                        margin: "0 0 16px",
+                        flex: 1,
+                      }}
+                    >
+                      {p.desc}
+                    </p>
+                    <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
+                      {p.tags.map((t) => (
+                        <span
+                          key={t}
+                          style={{
+                            padding: "3px 10px",
+                            borderRadius: 12,
+                            fontSize: 12,
+                            fontFamily: SANS,
+                            color: C.tealDark,
+                            background: C.tealVLight,
+                            fontWeight: 500,
+                          }}
+                        >
+                          {t}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             </RevealWrapper>
           ))}
         </div>
