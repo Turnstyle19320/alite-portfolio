@@ -105,7 +105,7 @@ export default function Nav() {
             style={{
               padding: "8px 20px",
               borderRadius: 6,
-              background: C.teal,
+              background: C.tealDark,
               color: "#fff",
               fontFamily: SANS,
               fontSize: 14,
@@ -161,7 +161,7 @@ export default function Nav() {
             style={{
               padding: "10px 18px",
               borderRadius: 6,
-              background: C.teal,
+              background: C.tealDark,
               color: "#fff",
               fontFamily: SANS,
               fontSize: 15,

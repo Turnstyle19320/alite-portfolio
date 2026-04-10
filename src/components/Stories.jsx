@@ -149,7 +149,7 @@ export default function Stories() {
                     style={{
                       fontFamily: SANS,
                       fontSize: 13,
-                      color: C.teal,
+                      color: C.tealText,
                       textDecoration: "none",
                       marginTop: 14,
                       fontWeight: 600,

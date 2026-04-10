@@ -48,7 +48,7 @@ export default function Resources() {
     >
       <div style={{ maxWidth: 680, margin: "0 auto" }}>
         <RevealWrapper>
-          <SectionLabel color={C.gold}>Resources</SectionLabel>
+          <SectionLabel color={C.goldText}>Resources</SectionLabel>
           <h2
             style={{
               fontFamily: SERIF,
@@ -64,7 +64,9 @@ export default function Resources() {
         </RevealWrapper>
 
         <RevealWrapper delay={0.1}>
+          <label htmlFor="resource-search" className="sr-only">Search resources</label>
           <input
+            id="resource-search"
             type="text"
             placeholder="Search resources..."
             value={query}
@@ -163,7 +165,7 @@ export default function Resources() {
                 >
                   {item}
                 </span>
-                <span style={{ color: C.teal, fontSize: 15, flexShrink: 0 }}>
+                <span style={{ color: C.tealText, fontSize: 15, flexShrink: 0 }}>
                   &rarr;
                 </span>
               </a>

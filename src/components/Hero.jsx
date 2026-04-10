@@ -78,7 +78,7 @@ export default function Hero() {
               style={{
                 fontFamily: SANS,
                 fontSize: 13,
-                color: C.teal,
+                color: C.tealText,
                 letterSpacing: 1.5,
                 textTransform: "uppercase",
                 fontWeight: 600,
@@ -121,7 +121,7 @@ export default function Hero() {
               ...fade(0.5),
               fontFamily: SANS,
               fontSize: 14,
-              color: C.teal,
+              color: C.tealText,
               fontWeight: 600,
               margin: "0 0 32px",
             }}
@@ -135,13 +135,13 @@ export default function Hero() {
               style={{
                 padding: "12px 28px",
                 borderRadius: 6,
-                background: C.teal,
+                background: C.tealDark,
                 color: "#fff",
                 fontFamily: SANS,
                 fontSize: 15,
                 fontWeight: 600,
                 textDecoration: "none",
-                boxShadow: `0 2px 12px ${C.teal}33`,
+                boxShadow: `0 2px 12px ${C.tealDark}33`,
               }}
             >
               Talk to Us

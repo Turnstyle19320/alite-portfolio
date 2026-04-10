@@ -42,7 +42,7 @@ export default function Services() {
     >
       <div style={{ maxWidth: 1040, margin: "0 auto" }}>
         <RevealWrapper>
-          <SectionLabel color={C.gold}>How we work</SectionLabel>
+          <SectionLabel color={C.goldText}>How we work</SectionLabel>
           <h2
             style={{
               fontFamily: SERIF,

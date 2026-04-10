@@ -1,7 +1,7 @@
 import { C, SANS } from "../constants";
 import Diamond from "./Diamond";
 
-export default function SectionLabel({ children, color = C.teal }) {
+export default function SectionLabel({ children, color = C.tealText }) {
   return (
     <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12 }}>
       <Diamond size={9} color={color} />

@@ -9,36 +9,42 @@ const WORK_ITEMS = [
     title: "IEP Goal Assistant",
     desc: "Built in BrainFreeze for special education teams at Ingham ISD. The agent drafts standards-aligned IEP goals from teacher input, cutting drafting time and giving staff a starting point they can refine, not a finished product they have to accept.",
     color: C.teal,
+    textColor: C.tealText,
   },
   {
     label: "PD",
     title: "Prompting the Will to Change",
     desc: "Conference session for district and ISD leaders who are past the hype cycle and ready to talk about what AI adoption actually requires: shifting culture, not just installing tools. Grounded in Tony Frontier's work on effort and excellence.",
     color: C.gold,
+    textColor: C.goldText,
   },
   {
     label: "Framework",
     title: "AI Guidelines for Districts",
     desc: "A shared framework for responsible AI use, published on inghamisd.org and adopted by districts across the service area. Covers policy language, acceptable use, data privacy, and staff expectations. Built to be adapted, not just adopted.",
     color: C.tealDark,
+    textColor: C.tealDark,
   },
   {
     label: "Pilot",
     title: "Formative Assessment Agent",
     desc: "Co-designed with an instructional coach at a partner district. This pilot uses an AI agent to analyze formative assessment data in near real-time, helping teachers adjust instruction the next day instead of next week.",
     color: C.olive,
+    textColor: C.oliveText,
   },
   {
     label: "Leadership",
     title: "CoSN Cabinet Summit",
     desc: "Delivered at the CoSN Cabinet Summit for district leadership teams. This session moves past AI buzzwords and into the real questions: What's our readiness? What are the risks? What should we actually try first?",
     color: C.navy,
+    textColor: C.navy,
   },
   {
     label: "Platform",
     title: "BrainFreeze / Airia",
     desc: "Our agent-building backbone. BrainFreeze and Airia give ALITE the ability to create purpose-built AI tools for ISD departments and local districts, with persistent memory, custom instructions, and the security controls a school environment requires.",
     color: C.brown,
+    textColor: C.brown,
   },
 ];
 
@@ -108,7 +114,7 @@ export default function Work() {
                     style={{
                       fontFamily: SANS,
                       fontSize: 11,
-                      color: w.color,
+                      color: w.textColor,
                       letterSpacing: 1,
                       textTransform: "uppercase",
                       fontWeight: 600,

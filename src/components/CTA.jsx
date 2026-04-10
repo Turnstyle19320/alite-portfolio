@@ -63,7 +63,7 @@ export default function CTA() {
               fontFamily: SANS,
               fontSize: 15,
               lineHeight: 1.75,
-              color: "rgba(255,255,255,0.6)",
+              color: "rgba(255,255,255,0.85)",
               margin: "0 0 32px",
             }}
           >
@@ -106,7 +106,7 @@ export default function CTA() {
                 padding: "14px 32px",
                 borderRadius: 6,
                 border: "1px solid rgba(255,255,255,0.2)",
-                color: "rgba(255,255,255,0.8)",
+                color: "rgba(255,255,255,0.95)",
                 fontFamily: SANS,
                 fontSize: 15,
                 fontWeight: 500,
