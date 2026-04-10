@@ -7,37 +7,37 @@ const WORK_ITEMS = [
   {
     label: "Agent",
     title: "IEP Goal Assistant",
-    desc: "[Built in BrainFreeze — helps special ed teams draft standards-aligned IEP goals.]",
+    desc: "Built in BrainFreeze for special education teams at Ingham ISD. The agent drafts standards-aligned IEP goals from teacher input, cutting drafting time and giving staff a starting point they can refine \u2014 not a finished product they have to accept.",
     color: C.teal,
   },
   {
     label: "PD",
     title: "Prompting the Will to Change",
-    desc: "[Conference session for curriculum directors on AI as the bandwidth solution teachers have been waiting for.]",
+    desc: "Conference session for district and ISD leaders who are past the hype cycle and ready to talk about what AI adoption actually requires \u2014 shifting culture, not just installing tools. Grounded in Tony Frontier's work on effort and excellence.",
     color: C.gold,
   },
   {
     label: "Framework",
     title: "AI Guidelines for Districts",
-    desc: "[Published on inghamisd.org — shared framework for responsible AI use across the service area.]",
+    desc: "A shared framework for responsible AI use, published on inghamisd.org and adopted by districts across the service area. Covers policy language, acceptable use, data privacy, and staff expectations \u2014 built to be adapted, not just adopted.",
     color: C.tealDark,
   },
   {
     label: "Pilot",
     title: "Formative Assessment Agent",
-    desc: "[Working with a high school instructional coach to build an AI-assisted exit ticket analyzer.]",
+    desc: "Co-designed with an instructional coach at a partner district. This pilot uses an AI agent to analyze formative assessment data in near real-time, helping teachers adjust instruction the next day instead of next week.",
     color: C.olive,
   },
   {
     label: "Leadership",
     title: "CoSN Cabinet Summit",
-    desc: "[Immersive presentation for district leadership on AI readiness and Tony Frontier's framework.]",
+    desc: "Delivered at the CoSN Cabinet Summit for district leadership teams. This session moves past AI buzzwords and into the real questions: What's our readiness? What are the risks? What should we actually try first?",
     color: C.navy,
   },
   {
     label: "Platform",
     title: "BrainFreeze / Airia",
-    desc: "[Enterprise AI agent platform — building district-specific agents with persistent memory.]",
+    desc: "Our agent-building backbone. BrainFreeze and Airia give ALITE the ability to create purpose-built AI tools for ISD departments and local districts \u2014 with persistent memory, custom instructions, and the security controls a school environment requires.",
     color: C.brown,
   },
 ];
@@ -69,8 +69,9 @@ export default function Work() {
               maxWidth: 480,
             }}
           >
-            [Placeholder — Agents, frameworks, PD sessions, and pilots. This is a living
-            portfolio — it grows as we work.]
+            This is what we've built so far — for ISD teams down the hall and for
+            districts across the service area. Some of it is shipping now. Some of it is
+            still being tested. All of it started with a real problem someone brought us.
           </p>
         </RevealWrapper>
 

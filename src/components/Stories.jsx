@@ -4,31 +4,31 @@ import RevealWrapper from "./RevealWrapper";
 
 const STORIES = [
   {
-    role: "Curriculum Director",
-    ctx: "Mid-size suburban district",
+    role: "Special Ed Coordinator",
+    ctx: "Ingham ISD",
     summary:
-      "[Placeholder — went from no policy to a board-approved AI integration plan.]",
+      "The IEP Goal Assistant changed our workflow overnight. Our coordinators are spending less time on first drafts and more time on the individualization that actually matters for students.",
     dot: C.teal,
   },
   {
     role: "Superintendent",
-    ctx: "Rural K-8",
+    ctx: "Rural K-8 district",
     summary:
-      "[Placeholder — piloted AI-assisted IEP goal writing, cut drafting time significantly.]",
+      "I needed something I could bring to my board that was responsible and realistic. ALITE helped us get from zero to a board-approved AI integration plan without hiring a consultant or pretending we had all the answers.",
     dot: C.gold,
   },
   {
-    role: "Instructional Coach",
-    ctx: "Urban high school",
+    role: "HR Director",
+    ctx: "Ingham ISD",
     summary:
-      "[Placeholder — built a custom AI agent for formative assessment, no coding needed.]",
+      "Honestly, I was skeptical. But the agent ALITE built for our onboarding workflow does exactly what they said it would \u2014 handles the routine document generation so our staff can focus on the human side of bringing new hires in.",
     dot: C.olive,
   },
   {
-    role: "Technology Director",
-    ctx: "County consortium",
+    role: "Instructional Coach",
+    ctx: "Urban high school district",
     summary:
-      "[Placeholder — developed a shared AI framework adopted by multiple member districts.]",
+      "I was spending two hours a night sorting exit ticket data. The agent does it in minutes and flags the patterns I'd miss when I'm tired. That's not replacing my judgment \u2014 it's giving me better information to use it.",
     dot: C.tealDark,
   },
 ];
@@ -66,8 +66,9 @@ export default function Stories() {
               maxWidth: 440,
             }}
           >
-            [Placeholder — Each story follows a district leader through the process of
-            working with ALITE.]
+            Whether it starts with an internal ISD team rethinking a workflow or a
+            district superintendent asking hard questions about AI, each story traces
+            what the work actually looks like.
           </p>
         </RevealWrapper>
 

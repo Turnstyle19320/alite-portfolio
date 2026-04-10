@@ -39,9 +39,12 @@ export default function Niche() {
                 margin: "0 0 12px",
               }}
             >
-              [Placeholder — ISDs sit between the state and local districts. Close enough
-              to know what classrooms need, broad enough to build things no single district
-              could justify alone.]
+              An intermediate school district exists between the state and the local
+              districts it serves. That's not a bureaucratic detail — it's a strategic
+              advantage. ISDs have the regional perspective to spot patterns, the technical
+              resources to experiment, and the relationships to move good ideas into
+              practice without the overhead of a state-level rollout or the isolation of a
+              single district going it alone.
             </p>
             <p
               style={{
@@ -52,9 +55,13 @@ export default function Niche() {
                 margin: 0,
               }}
             >
-              [Placeholder — We're not a vendor. We help you figure out what's worth
-              trying, build the first version with you, and stick around when it gets
-              complicated.]
+              ALITE leans into that advantage deliberately. We build and refine our AI work
+              inside Ingham ISD first — real pilots, real policy, real professional
+              development with our own staff. That means when we extend support to local
+              districts, we arrive with tested tools, honest assessments of what works, and
+              firsthand experience with the friction points. The goal isn't to sell
+              districts on AI. It's to make sure they have a partner who's already a few
+              steps down the road and can help them move at a pace that makes sense.
             </p>
           </RevealWrapper>
         </div>

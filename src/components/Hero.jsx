@@ -87,7 +87,7 @@ export default function Hero() {
             fontWeight: 700,
           }}
         >
-          [Your headline here]
+          Building AI Capacity Across Ingham ISD
         </h1>
 
         <p
@@ -101,7 +101,7 @@ export default function Hero() {
             margin: "0 0 12px",
           }}
         >
-          [Placeholder — one sentence about what ALITE does for districts. Keep it concrete.]
+          We work alongside ISD teams and district leaders to pilot AI solutions, train staff, and turn emerging technology into everyday practice.
         </p>
 
         <p
@@ -114,7 +114,7 @@ export default function Hero() {
             margin: "0 0 32px",
           }}
         >
-          Working with districts across the Ingham ISD service area.
+          Serving teams across Ingham ISD and the districts in our service area.
         </p>
 
         <div style={{ ...fade(0.55), display: "flex", gap: 14, flexWrap: "wrap" }}>

@@ -41,7 +41,7 @@ export default function CTA() {
               fontWeight: 700,
             }}
           >
-            Your district doesn't have to
+            You don't have to
             <br />
             figure this out alone.
           </h2>
@@ -57,9 +57,9 @@ export default function CTA() {
               margin: "0 0 32px",
             }}
           >
-            [Placeholder — If you're between "we need a policy" and "we need a plan,"
-            that's exactly where we start. No pitch. A conversation about what's possible
-            for your district.]
+            We work with ISD teams and local districts at every stage — from first
+            questions to working pilots. If you're not sure where to start, that's fine.
+            Most people aren't. Reach out and we'll figure it out together.
           </p>
         </RevealWrapper>
 

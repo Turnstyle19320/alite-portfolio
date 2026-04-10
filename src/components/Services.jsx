@@ -6,19 +6,19 @@ const PILLARS = [
   {
     title: "AI Strategy & Implementation",
     accent: C.teal,
-    desc: "[Placeholder: Roadmaps, risk discovery, ethical frameworks.]",
+    desc: "We help teams figure out where AI fits \u2014 and where it doesn't. Whether you're an ISD department trying to streamline internal workflows or a district building your first AI integration plan, we start with your actual priorities and work toward a roadmap you can defend to your board.",
     tags: ["Roadmaps", "Risk Discovery", "Ethics"],
   },
   {
     title: "Professional Learning",
     accent: C.gold,
-    desc: "[Placeholder: Conferences, training, coaching — what makes your PD different.]",
+    desc: "We build professional learning around the questions educators are actually asking. That means hands-on workshops for ISD departments, conference sessions for regional audiences, and embedded coaching for district teams who want to keep building after the session ends.",
     tags: ["Workshops", "Conferences", "Coaching"],
   },
   {
     title: "Innovation Labs",
     accent: C.tealDark,
-    desc: "[Placeholder: Agent building, POCs, pilots — what districts actually get.]",
+    desc: "This is where ideas become working tools. We build AI agents, run proof-of-concept tests, and co-design pilots with ISD departments and district partners \u2014 then we measure what actually worked before scaling anything.",
     tags: ["Agent Building", "POCs", "Pilots"],
   },
 ];
@@ -46,7 +46,7 @@ export default function Services() {
               fontWeight: 700,
             }}
           >
-            Three ways we partner with districts
+            Three ways we partner with you
           </h2>
         </RevealWrapper>
 
