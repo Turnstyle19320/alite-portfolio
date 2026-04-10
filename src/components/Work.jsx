@@ -7,19 +7,19 @@ const WORK_ITEMS = [
   {
     label: "Agent",
     title: "IEP Goal Assistant",
-    desc: "Built in BrainFreeze for special education teams at Ingham ISD. The agent drafts standards-aligned IEP goals from teacher input, cutting drafting time and giving staff a starting point they can refine \u2014 not a finished product they have to accept.",
+    desc: "Built in BrainFreeze for special education teams at Ingham ISD. The agent drafts standards-aligned IEP goals from teacher input, cutting drafting time and giving staff a starting point they can refine, not a finished product they have to accept.",
     color: C.teal,
   },
   {
     label: "PD",
     title: "Prompting the Will to Change",
-    desc: "Conference session for district and ISD leaders who are past the hype cycle and ready to talk about what AI adoption actually requires \u2014 shifting culture, not just installing tools. Grounded in Tony Frontier's work on effort and excellence.",
+    desc: "Conference session for district and ISD leaders who are past the hype cycle and ready to talk about what AI adoption actually requires: shifting culture, not just installing tools. Grounded in Tony Frontier's work on effort and excellence.",
     color: C.gold,
   },
   {
     label: "Framework",
     title: "AI Guidelines for Districts",
-    desc: "A shared framework for responsible AI use, published on inghamisd.org and adopted by districts across the service area. Covers policy language, acceptable use, data privacy, and staff expectations \u2014 built to be adapted, not just adopted.",
+    desc: "A shared framework for responsible AI use, published on inghamisd.org and adopted by districts across the service area. Covers policy language, acceptable use, data privacy, and staff expectations. Built to be adapted, not just adopted.",
     color: C.tealDark,
   },
   {
@@ -37,7 +37,7 @@ const WORK_ITEMS = [
   {
     label: "Platform",
     title: "BrainFreeze / Airia",
-    desc: "Our agent-building backbone. BrainFreeze and Airia give ALITE the ability to create purpose-built AI tools for ISD departments and local districts \u2014 with persistent memory, custom instructions, and the security controls a school environment requires.",
+    desc: "Our agent-building backbone. BrainFreeze and Airia give ALITE the ability to create purpose-built AI tools for ISD departments and local districts, with persistent memory, custom instructions, and the security controls a school environment requires.",
     color: C.brown,
   },
 ];
@@ -69,7 +69,7 @@ export default function Work() {
               maxWidth: 480,
             }}
           >
-            This is what we've built so far — for ISD teams down the hall and for
+            This is what we've built so far, for ISD teams down the hall and for
             districts across the service area. Some of it is shipping now. Some of it is
             still being tested. All of it started with a real problem someone brought us.
           </p>

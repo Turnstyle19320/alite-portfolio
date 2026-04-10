@@ -21,14 +21,14 @@ const STORIES = [
     role: "HR Director",
     ctx: "Ingham ISD",
     summary:
-      "Honestly, I was skeptical. But the agent ALITE built for our onboarding workflow does exactly what they said it would \u2014 handles the routine document generation so our staff can focus on the human side of bringing new hires in.",
+      "Honestly, I was skeptical. But the agent ALITE built for our onboarding workflow does exactly what they said it would. Handles the routine document generation so our staff can focus on the human side of bringing new hires in.",
     dot: C.olive,
   },
   {
     role: "Instructional Coach",
     ctx: "Urban high school district",
     summary:
-      "I was spending two hours a night sorting exit ticket data. The agent does it in minutes and flags the patterns I'd miss when I'm tired. That's not replacing my judgment \u2014 it's giving me better information to use it.",
+      "I was spending two hours a night sorting exit ticket data. The agent does it in minutes and flags the patterns I'd miss when I'm tired. That's not replacing my judgment. It's giving me better information to use it.",
     dot: C.tealDark,
   },
 ];

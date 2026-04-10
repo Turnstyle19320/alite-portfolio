@@ -6,7 +6,7 @@ const PILLARS = [
   {
     title: "AI Strategy & Implementation",
     accent: C.teal,
-    desc: "We help teams figure out where AI fits \u2014 and where it doesn't. Whether you're an ISD department trying to streamline internal workflows or a district building your first AI integration plan, we start with your actual priorities and work toward a roadmap you can defend to your board.",
+    desc: "We help teams figure out where AI fits, and where it doesn't. Whether you're an ISD department trying to streamline internal workflows or a district building your first AI integration plan, we start with your actual priorities and work toward a roadmap you can defend to your board.",
     tags: ["Roadmaps", "Risk Discovery", "Ethics"],
   },
   {
@@ -18,7 +18,7 @@ const PILLARS = [
   {
     title: "Innovation Labs",
     accent: C.tealDark,
-    desc: "This is where ideas become working tools. We build AI agents, run proof-of-concept tests, and co-design pilots with ISD departments and district partners \u2014 then we measure what actually worked before scaling anything.",
+    desc: "This is where ideas become working tools. We build AI agents, run proof-of-concept tests, and co-design pilots with ISD departments and district partners. Then we measure what actually worked before scaling anything.",
     tags: ["Agent Building", "POCs", "Pilots"],
   },
 ];

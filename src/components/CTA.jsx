@@ -57,7 +57,7 @@ export default function CTA() {
               margin: "0 0 32px",
             }}
           >
-            We work with ISD teams and local districts at every stage — from first
+            We work with ISD teams and local districts at every stage, from first
             questions to working pilots. If you're not sure where to start, that's fine.
             Most people aren't. Reach out and we'll figure it out together.
           </p>
