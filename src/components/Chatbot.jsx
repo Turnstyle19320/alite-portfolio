@@ -3,34 +3,38 @@ import { C, SANS, SERIF } from "../constants";
 
 const API_URL = "https://alite-chat-proxy.preppanel.workers.dev/chat";
 
-// Agent Smith SVG avatar
-function SmithAvatar({ size = 48 }) {
+// The Oracle SVG avatar
+function OracleAvatar({ size = 48 }) {
   return (
     <svg width={size} height={size} viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-      {/* Dark suit body */}
-      <ellipse cx="24" cy="44" rx="16" ry="8" fill="#1a1a2e" />
-      {/* White shirt collar */}
-      <path d="M20 36 L24 40 L28 36" fill="white" stroke="white" strokeWidth="0.5" />
-      {/* Dark tie */}
-      <path d="M23.5 36 L24 42 L24.5 36" fill="#001d55" />
+      {/* Robe body */}
+      <ellipse cx="24" cy="44" rx="16" ry="8" fill="#5c3a6e" />
+      {/* Robe top */}
+      <path d="M17 38 L20 34 L24 36 L28 34 L31 38" fill="#6b4580" />
+      {/* Floral details on robe */}
+      <circle cx="20" cy="37" r="1" fill="#d4a0d4" opacity="0.7" />
+      <circle cx="24" cy="35.5" r="1" fill="#d4a0d4" opacity="0.7" />
+      <circle cx="28" cy="37" r="1" fill="#d4a0d4" opacity="0.7" />
       {/* Head */}
-      <ellipse cx="24" cy="22" rx="9" ry="10" fill="#e8d5b7" />
-      {/* Sunglasses */}
-      <rect x="15.5" y="19" width="7" height="5" rx="1" fill="#111" />
-      <rect x="25.5" y="19" width="7" height="5" rx="1" fill="#111" />
-      <line x1="22.5" y1="21" x2="25.5" y2="21" stroke="#111" strokeWidth="1" />
-      <line x1="15.5" y1="21" x2="13" y2="19.5" stroke="#111" strokeWidth="0.8" />
-      <line x1="32.5" y1="21" x2="35" y2="19.5" stroke="#111" strokeWidth="0.8" />
-      {/* Sunglasses glare */}
-      <rect x="16.5" y="19.5" width="2" height="1" rx="0.5" fill="#333" opacity="0.5" />
-      <rect x="26.5" y="19.5" width="2" height="1" rx="0.5" fill="#333" opacity="0.5" />
-      {/* Slicked hair */}
-      <path d="M15 20 Q15 12 24 11 Q33 12 33 20 Q33 16 24 14 Q15 16 15 20Z" fill="#2a2a2a" />
-      {/* Mouth - slight smirk */}
-      <path d="M21 27 Q24 29 27 27" fill="none" stroke="#8b6f5a" strokeWidth="0.8" />
-      {/* Earpiece */}
-      <circle cx="14" cy="23" r="1" fill="#333" />
-      <path d="M14 24 L13 28" stroke="#333" strokeWidth="0.5" />
+      <ellipse cx="24" cy="22" rx="9" ry="10" fill="#c07840" />
+      {/* Hair */}
+      <path d="M15 18 Q15 11 24 10 Q33 11 33 18 Q30 13 24 12 Q18 13 15 18Z" fill="#4a3a30" />
+      {/* Hair bun */}
+      <ellipse cx="24" cy="10" rx="4" ry="3" fill="#4a3a30" />
+      {/* Grey streaks */}
+      <path d="M16 16 Q19 13 23 12" stroke="#9a8a80" strokeWidth="0.8" fill="none" />
+      <path d="M32 16 Q29 13 25 12" stroke="#9a8a80" strokeWidth="0.8" fill="none" />
+      {/* Round glasses */}
+      <circle cx="19.5" cy="21" r="3.5" fill="none" stroke="#3a2a1a" strokeWidth="1.2" />
+      <circle cx="28.5" cy="21" r="3.5" fill="none" stroke="#3a2a1a" strokeWidth="1.2" />
+      <line x1="23" y1="21" x2="25" y2="21" stroke="#3a2a1a" strokeWidth="1" />
+      <line x1="16" y1="21" x2="13.5" y2="20" stroke="#3a2a1a" strokeWidth="0.8" />
+      <line x1="32" y1="21" x2="34.5" y2="20" stroke="#3a2a1a" strokeWidth="0.8" />
+      {/* Eyes */}
+      <circle cx="19.5" cy="21" r="1.5" fill="#2a1a0a" />
+      <circle cx="28.5" cy="21" r="1.5" fill="#2a1a0a" />
+      {/* Warm smile */}
+      <path d="M20 27.5 Q24 30.5 28 27.5" fill="none" stroke="#8a5a30" strokeWidth="1" />
     </svg>
   );
 }
@@ -179,7 +183,7 @@ export default function Chatbot() {
         {open ? (
           <span style={{ color: "#fff", fontSize: 22, lineHeight: 1 }}>&times;</span>
         ) : (
-          <SmithAvatar size={36} />
+          <OracleAvatar size={36} />
         )}
       </button>
 
@@ -216,7 +220,7 @@ export default function Chatbot() {
               flexShrink: 0,
             }}
           >
-            <SmithAvatar size={32} />
+            <OracleAvatar size={32} />
             <div>
               <div
                 style={{
@@ -226,7 +230,7 @@ export default function Chatbot() {
                   fontWeight: 700,
                 }}
               >
-                Agent Smith
+                The Oracle
               </div>
               <div
                 style={{
@@ -312,7 +316,7 @@ export default function Chatbot() {
               id="chat-input"
               ref={inputRef}
               type="text"
-              placeholder="Ask Agent Smith..."
+              placeholder="Ask The Oracle..."
               value={input}
               onChange={(e) => setInput(e.target.value)}
               disabled={loading}
